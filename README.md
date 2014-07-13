@@ -1,6 +1,6 @@
 # Cats-ui
 
-This README outlines the details of collaborating on this Ember application.
+![demo](public/demo.gif)
 
 ## Installation
 
