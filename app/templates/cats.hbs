@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-lg-6">
+    <h1>All of the Cats</h1>
+    <div class="row">
+      {{#each persistedCats}}
+        <div class="col-lg-6">
+          <div class="thumbnail">
+            {{cloudinary-tag cloudinaryPublicId}}
+            <div class="caption">
+              <h3>{{name}}</h3>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+
+  <div class="col-lg-6">
+    <h1>Add a New Cat</h1>
+    <form role="form" {{action 'createCat' on='submit'}}>
+      <div class="form-group">
+        <label for="cat-name">Cat Name</label>
+        {{input value=newCat.name class="form-control" id="cat-name" placeholder='Cat Name'}}
+      </div>
+      <div class="form-group">
+        <label for="cat-image">File input</label>
+        {{view 'cloudinary'}}
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
