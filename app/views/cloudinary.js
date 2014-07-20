@@ -3,10 +3,8 @@ import Ember from 'ember';
 export default Ember.View.extend({
   tagName: 'input',
   name: 'file',
-  classNames: ['cloudinary-fileupload address-form-upload'],
-  attributeBindings: ['name', 'type', 'data-cloudinary-field', 'data-form-data'],
+  attributeBindings: ['name', 'type', 'data-form-data'],
   type: 'file',
-  'data-cloudinary-field': 'image_id',
 
   didInsertElement: function() {
     var _this = this,
