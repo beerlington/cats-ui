@@ -28,14 +28,14 @@ module.exports = function(environment) {
     ENV.API_NAMESPACE = 'v1';
     ENV.ROOT_NAMESPACE = '';
     ENV.CLOUDINARY_NAME = '';
-    ENV.CLOUDINARY_KEY = '';
+    ENV.CLOUDINARY_UPLOAD_PRESET = '';
   }
 
   if (environment === 'production') {
     ENV.API_NAMESPACE = 'api/v1';
     ENV.ROOT_NAMESPACE = '/api';
     ENV.CLOUDINARY_NAME = '';
-    ENV.CLOUDINARY_KEY = '';
+    ENV.CLOUDINARY_UPLOAD_PRESET = '';
   }
 
   return ENV;

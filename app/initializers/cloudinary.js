@@ -3,8 +3,7 @@ export default {
 
   initialize: function(/* container, app */) {
     $.cloudinary.config({
-      cloud_name: CatsUiENV.CLOUDINARY_NAME,
-      api_key:    CatsUiENV.CLOUDINARY_KEY
+      cloud_name: CatsUiENV.CLOUDINARY_NAME
     });
   }
 };
