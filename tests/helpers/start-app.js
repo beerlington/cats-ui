@@ -2,6 +2,7 @@
 
 var Application = require('cats-ui/app')['default'];
 var Router = require('cats-ui/router')['default'];
+import Ember from 'ember';
 
 export default function startApp(attrs) {
   var App;
