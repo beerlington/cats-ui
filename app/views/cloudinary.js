@@ -23,6 +23,14 @@ export default Ember.View.extend({
         acceptFileTypes: /(\.|\/)(gif|jpe?g|png|bmp|ico)$/i,
         maxFileSize: 5000000 // 5MB
       });
+      
+      _this.$().bind("fileuploadstart", function(e){
+        controller.set('uploading', true);
+      });
+    
+      _this.$().bind("fileuploadstop", function(e){
+        controller.set('uploading', false);
+      });
 
       _this.$().bind('fileuploaddone', function (e, data) {
         controller.set('newCat.cloudinaryPublicId', data.result.public_id);
